@@ -22,6 +22,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 	Timer frameDraw;
 	int killed = 0;
 	Rocketship r = new Rocketship(250, 700, 50, 50);
+	int speed = 10;
 	
 	GamePanel(){
 		titleFont = new Font("Arial", Font.PLAIN, 48);
@@ -116,28 +117,36 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 		if (e.getKeyCode()==KeyEvent.VK_UP) {
 		    System.out.println("UP");
 		    if(r.y >= 10) {
-		    	r.up();
+		    	for (int i = 0; i < speed; i++) {
+		    		r.up();
+		    	}
 		    }
 		}
 		
-		if (e.getKeyCode()==KeyEvent.VK_DOWN) {
+		else if (e.getKeyCode()==KeyEvent.VK_DOWN) {
 		    System.out.println("DOWN");
-		    if(r.y <= 800) {
-		    	r.down();
+		    if(r.y <= 700) {
+		    	for (int i = 0; i < speed; i++) {	
+		    		r.down();
+		    	}
 		    }
 		}
 		
 		if (e.getKeyCode()==KeyEvent.VK_LEFT) {
 		    System.out.println("LEFT");
 		    if(r.x >= 10){
-		    	r.left();
+		    	for (int i = 0; i < speed; i++) {
+					r.left();
+				}
 		    }
 		}
 		
-		if (e.getKeyCode()==KeyEvent.VK_RIGHT) {
+		else if (e.getKeyCode()==KeyEvent.VK_RIGHT) {
 		    System.out.println("RIGHT");
-		    if(r.x <= 500) {
-		    	r.right();
+		    if(r.x <= 420) {
+		    	for (int i = 0; i < speed; i++) {
+					r.right();
+				}
 		    }
 		}
 		
@@ -147,16 +156,28 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
 		if (e.getKeyCode()==KeyEvent.VK_UP) {
-			r.up();
+			if(r.y >= 10) {
+		    	r.up();
+		    	r.up();
+		    }
 		}
 		if (e.getKeyCode()==KeyEvent.VK_DOWN) {
-			r.down();
+			 if(r.y <= 700) {
+			    	r.down();
+			    	r.down();
+			    }
 		}
 		if (e.getKeyCode()==KeyEvent.VK_LEFT) {
-			r.left();
+			if(r.x >= 10){
+		    	r.left();
+		    	r.left();
+		    }
 		}
 		if (e.getKeyCode()==KeyEvent.VK_RIGHT) {
-			r.right();
+			 if(r.x <= 420) {
+			    	r.right();
+			    	r.right();
+			    }
 		}
 	}
 	

@@ -5,7 +5,6 @@ public class Rocketship extends GameObject {
 
 	Rocketship(int x, int y, int width, int height) {
 		super(x, y, width, height);
-		speed = 10;
 	}
 	
 	void draw(Graphics g) {
@@ -14,15 +13,15 @@ public class Rocketship extends GameObject {
 	}
 	
 	void up() {
-		y-=speed;
+		y-=1;
 	}
 	void down() {
-		y+=speed;
+		y+=1;
 	}
 	void left() {
-		x-=speed;
+		x-=1;
 	}
 	void right() {
-		x+=speed;
+		x+=1;
 	}
 }
