@@ -117,36 +117,28 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 		if (e.getKeyCode()==KeyEvent.VK_UP) {
 		    System.out.println("UP");
 		    if(r.y >= 10) {
-		    	for (int i = 0; i < speed; i++) {
-		    		r.up();
-		    	}
+		    	r.up();
 		    }
 		}
 		
 		else if (e.getKeyCode()==KeyEvent.VK_DOWN) {
 		    System.out.println("DOWN");
 		    if(r.y <= 700) {
-		    	for (int i = 0; i < speed; i++) {	
-		    		r.down();
-		    	}
-		    }
+		    	r.down();
+		     }
 		}
 		
 		if (e.getKeyCode()==KeyEvent.VK_LEFT) {
 		    System.out.println("LEFT");
 		    if(r.x >= 10){
-		    	for (int i = 0; i < speed; i++) {
-					r.left();
-				}
+		    	r.left();
 		    }
 		}
 		
 		else if (e.getKeyCode()==KeyEvent.VK_RIGHT) {
 		    System.out.println("RIGHT");
 		    if(r.x <= 420) {
-		    	for (int i = 0; i < speed; i++) {
-					r.right();
-				}
+		    	r.right();
 		    }
 		}
 		
