@@ -1,14 +1,15 @@
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Aliens extends GamePanel{
+public class Aliens extends GameObject{
+		
+	Aliens(int x, int y, int width, int height) {
+		super(x, y, width, height);
 	
-	Aliens(int x, int y, int width, int height){
-		speed = 1;
 	}
-	
+
 	void update() {
-		r.y+=speed;
+		y+=speed;
 	}
 	
 	void draw(Graphics g) {

@@ -1,12 +1,13 @@
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Projectile extends GamePanel{
+public class Projectile extends GameObject{
+	
+	Projectile(int x, int y, int width, int height) {
+		super(x, y, width, height);
 		
-	Projectile(int x, int y, int width, int height){
-		speed = 1;
 	}
-		
+
 	void update() {
 		y-=speed;
 	}
